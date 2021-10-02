@@ -18,7 +18,11 @@ def _load_json_schema(filename):
 superhero api call"""
 
 class TestSchema:
-    def test_validate_character_data_schema(self):
+    def test_validate_character_schema(self):
         id = get_random_id()
         character = get_character(id)
         assert_valid_schema(character, 'character_schema.json')
+
+
+
+    

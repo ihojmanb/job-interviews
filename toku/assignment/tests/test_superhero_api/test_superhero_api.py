@@ -20,12 +20,22 @@ class TestSuperHero:
         assert type(random_id) is int
         assert random_id > 0
 
-    def test_get_single_character(self, random_id):
+    def test_get_single_character_success(self, random_id):
         character = get_character(random_id)
         assert character  # checks character exists
         assert character["response"] == "success"
 
+    def test_get_single_character_fail(self):
+        character = get_character(0)
+        assert character
+        assert character["response"] == "error"
+
     def test_random_list_of_characters_is_not_empty(self, number_of_ids):
         list_of_characters = get_random_list_of_characters(number_of_ids)
-        assert list_of_characters
+        assert isinstance(list_of_characters, list)
         assert 10 == len(list_of_characters)
+
+    def test_random_list_of_characters_is_empty(self):
+        list_of_characters = get_random_list_of_characters(0)
+        assert isinstance(list_of_characters, list)
+        assert 0 == len(list_of_characters)
