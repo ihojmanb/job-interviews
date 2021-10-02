@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "response": { "type": "string" },
+    "name": { "type": "string" },
+    "powerstats": {
+      "type": "object",
+      "intelligence": { "type": "number" },
+      "strength": { "type": "number" },
+      "speed": { "type": "number" },
+      "durability": { "type": "number" },
+      "power": { "type": "number" },
+      "combat": { "type": "number" }
+    },
+    "biography": {
+      "type": "object",
+      "properties": {
+        "full-name": { "type": "string" },
+        "alter-egos": { "type": "string" },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "place-of-birth": { "type": "string" },
+        "first-appearance": { "type": "string" },
+        "publisher": { "type": "string" },
+        "alignment": { "type": "string" }
+      }
+    },
+    "appearance": {
+      "type": "object",
+      "properties": {
+        "gender": { "type": "string" },
+        "race": { "type": "string" },
+        "height": { "type": "array", "items": { "type": "string" } },
+        "weight": { "type": "array", "items": { "type": "string" } },
+        "eye-color": { "type": "string" },
+        "hair-color": { "type": "string" }
+      }
+    },
+    "work": {
+        "type": "object",
+        "properties": {
+            "occupation": {"type": "string"},
+            "base": {"type": "string"}
+        }
+    },
+    "connections": {
+        "type": "object",
+        "properties": {
+            "group-affiliation": {"type": "string"},
+            "relatives": {"type": "string"}
+        }
+    },
+    "image": {
+        "type": "object",
+        "properties": {
+            "url": {"type": "string"}
+        }
+    }
+  }
+}
