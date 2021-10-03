@@ -49,7 +49,7 @@ class Character:
 def random_stamina():
     return random.randint(0, 10)
 
-# Returns a Character object if id == 10, else returns None
+# Returns a Character object if id > 0, else returns None
 def build_character(id):
     if id > 0:
         character_data = get_character(id)

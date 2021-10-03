@@ -1,5 +1,4 @@
 from attr import attributes
-from conftest import good_character
 from fightclub_setup.superhero_api import *
 from characters.characters import *
 import math
@@ -23,7 +22,7 @@ class TestCharacters:
     def test_build_character_fail(self):
         character = build_character(0)
         assert not isinstance(character, Character)
-
+    
     def test_assign_stats_stamina_success(self, random_id):
         character = build_character(random_id)
         for attribute in attributes:
