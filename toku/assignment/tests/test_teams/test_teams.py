@@ -16,6 +16,8 @@ class TestTeams:
         team = TeamCreator.build_random_team(0)
         assert not isinstance(team, Team)
 
+# Los tests que ocupan los fixtures 'good_team' y 'bad_team'
+# aw se demoran demasiado
     def test_team_alignment_good_success(self, good_team):
         team = good_team
         assert isinstance(team, Team)
