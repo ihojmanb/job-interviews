@@ -27,7 +27,7 @@ class Character:
         self.__setattr__("HP", health_points)
 
     def set_actual_stamina(self):
-        self.__setattr__("actual_stamina", random_stamina())
+        self.__setattr__("actual_stamina", Character.random_stamina())
     
     def set_stats(self, attributes):
         powerstats = attributes["powerstats"]
@@ -35,7 +35,7 @@ class Character:
             # Setting stats attributes as ints
             self.__setattr__(stat, int(power) if power != 'null' else 0)
             # Setting actual stamina per stat
-            self.__setattr__(f'AS_{stat}', random_stamina())
+            self.__setattr__(f'AS_{stat}', Character.random_stamina())
     
     def set_alignment(self, attributes):
         alignment = attributes["biography"]["alignment"]
@@ -44,10 +44,11 @@ class Character:
     
     def attack(self):
         pass
-        
 
-def random_stamina():
-    return random.randint(0, 10)
+    @staticmethod
+    def random_stamina():
+        return random.randint(0, 10)
+
 
 # Returns a Character object if id > 0, else returns None
 def build_character(id):

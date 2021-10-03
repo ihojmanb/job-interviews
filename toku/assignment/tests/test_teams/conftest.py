@@ -11,11 +11,11 @@ def number_of_team_members():
 
 @pytest.fixture
 def fixture_team():
-    return build_team()
+    return TeamCreator.build_random_team(number_of_team_members=5)
 
 @pytest.fixture
 def good_team():
-    team = build_team()
+    team = TeamCreator.build_random_team(number_of_team_members=5)
     for index, character in enumerate(team.members):
         # if index is odd
         character.alignment = 1 if ((index + 1)%2 != 0) else -1
@@ -27,7 +27,7 @@ def good_team():
 
 @pytest.fixture
 def bad_team():
-    team = build_team()
+    team = TeamCreator.build_random_team(number_of_team_members=5)
     for index, character in enumerate(team.members):
         # if index is odd
         character.alignment = -1 if ((index + 1)%2 != 0) else 1
