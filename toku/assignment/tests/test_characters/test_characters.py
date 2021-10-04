@@ -1,8 +1,9 @@
+import math
+import pytest
 from attr import attributes
 from fightclub_setup.superhero_api import *
 from characters.characters import *
-import math
-import pytest
+from tests.test_characters.conftest import good_character
 
 attributes = [
     "intelligence",
@@ -10,7 +11,7 @@ attributes = [
     "speed",
     "durability",
     "power",
-    "combat",
+    "combat"
 ]
 
 class TestCharacters:
@@ -97,8 +98,7 @@ class TestCharacters:
         actual_health_points = character.HP
         assert not wrong_theoretical_health_points == actual_health_points
 
-    def test_set_actual_stats_success(self):
-        pytest.fail()
-
-    def test_set_actual_stats_fail(self):
-        pytest.fail()
+    def test_set_team_membership(self,good_character, random_id):
+        character = good_character    
+        character.set_team_membership(random_id)
+        assert character.team_membership == random_id

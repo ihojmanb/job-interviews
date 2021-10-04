@@ -1,11 +1,8 @@
 """
 conftest.py for teams
 """
-from teams.teams import *
+from teams.teams import TeamCreator
 import pytest
-import json
-import os
-import pathlib
 from fixture_team.fixture_team_loader import *
 
 @pytest.fixture
@@ -40,3 +37,4 @@ def bad_team():
     team.set_team_alignment()
     bad_team = team
     return bad_team
+
