@@ -11,7 +11,6 @@ class Team:
     def __init__(self, list_of_characters):
         self.set_team_members(list_of_characters)
         self.set_team_alignment()
-        pass
 
     def set_team_members(self, list_of_characters):
         members = list(
@@ -30,16 +29,28 @@ class Team:
         team_alignment = reduce(lambda x, y: x + y, alignment_list)
         team_alignment = "good" if team_alignment > 0 else "bad"
         self.__setattr__("alignment", team_alignment)
+    
+    def set_id(self, id):
+        self.__setattr__("id", id)
 
 
-# Falta testing en esta clase 
+# Falta testing en esta clase
+# 
 class TeamCreator:
+    team_counter = 0
     def __init__(self):
         pass
 
     @staticmethod
     def build_team(list_of_characters):
-            return Team(list_of_characters)
+        team = Team(list_of_characters)
+        TeamCreator.team_counter += 1
+        TeamCreator.set_id_to(team)
+        return team
+
+    @staticmethod
+    def set_id_to(team):
+        team.set_id(TeamCreator.team_counter)
 
     @staticmethod
     def build_random_team(number_of_team_members=5):

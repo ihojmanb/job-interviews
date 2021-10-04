@@ -20,8 +20,6 @@ class TestTeams:
         team = TeamCreator.build_random_team(0)
         assert not isinstance(team, Team)
 
-# Los tests que ocupan los fixtures 'good_team' y 'bad_team'
-# se demoran demasiado
     def test_team_alignment_good_success(self, good_team):
         team = good_team
         assert isinstance(team, Team)
@@ -41,6 +39,14 @@ class TestTeams:
         team = good_team
         assert isinstance(team, Team)
         assert not team.alignment == 'bad'
+
+    def test_set_id_to_team(self):
+        fixture_team = load_fixture_team()
+        last_counter = TeamCreator.team_counter
+        team = TeamCreator.build_team(fixture_team)
+        actual_counter = TeamCreator.team_counter
+        assert actual_counter > last_counter
+        assert team.id == actual_counter
 
     def test_teams_have_different_ids(self, good_team, bad_team):
         good_team = good_team

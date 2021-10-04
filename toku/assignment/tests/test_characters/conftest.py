@@ -1,5 +1,5 @@
 """
-conftest.py
+conftest.py for test_characters
 """
 from fightclub_setup.superhero_api import *
 from characters.characters import *
