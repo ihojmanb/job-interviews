@@ -11,6 +11,7 @@ class Team:
     def __init__(self, list_of_characters):
         self.set_team_members(list_of_characters)
         self.set_team_alignment()
+        pass
 
     def set_team_members(self, list_of_characters):
         members = list(
@@ -18,7 +19,7 @@ class Team:
                 # build_character es poco claro, sería bueno tener
                 # una clase que encapsulara el metodo y tener una instancia
                 # de ella en Team
-                lambda character: build_character(int(character["id"])),
+                lambda character: build_character(character),
                 list_of_characters,
             )
         )
@@ -43,6 +44,8 @@ class TeamCreator:
     @staticmethod
     def build_random_team(number_of_team_members=5):
         if number_of_team_members > 0:
+            # Aqui deberíamos tener una clase que encapsulara el metodo
+            # get_random_list_of_characters
             list_of_characters = get_random_list_of_characters(number_of_team_members)
             return TeamCreator.build_team(list_of_characters)
         else:

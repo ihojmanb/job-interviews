@@ -33,4 +33,3 @@ def get_random_list_of_characters(number_of_characters):
     list_of_ids = get_list_of_ids(number_of_characters)
     random_list_of_characters = list(map(lambda id: get_character(id), list_of_ids))
     return random_list_of_characters
-

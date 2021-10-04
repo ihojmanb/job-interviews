@@ -1,0 +1,210 @@
+{
+  "team": [
+    {
+      "response": "success",
+      "id": "533",
+      "name": "Q",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "12",
+        "speed": "17",
+        "durability": "100",
+        "power": "100",
+        "combat": "40"
+      },
+      "biography": {
+        "full-name": "Q",
+        "alter-egos": "No alter egos found.",
+        "aliases": ["Q Continuum"],
+        "place-of-birth": "-",
+        "first-appearance": "-",
+        "publisher": "Star Trek",
+        "alignment": "-"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "God / Eternal",
+        "height": ["-", "0 cm"],
+        "weight": ["- lb", "0 kg"],
+        "eye-color": "-",
+        "hair-color": "-"
+      },
+      "work": { "occupation": "-", "base": "-" },
+      "connections": { "group-affiliation": "-", "relatives": "-" },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/10578.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "75",
+      "name": "Beast",
+      "powerstats": {
+        "intelligence": "94",
+        "strength": "48",
+        "speed": "38",
+        "durability": "60",
+        "power": "43",
+        "combat": "85"
+      },
+      "biography": {
+        "full-name": "Henry Philip McCoy",
+        "alter-egos": "No alter egos found.",
+        "aliases": [
+          "Dr. McCoy",
+          "Hanko",
+          "Kreature",
+          "Mutate #666",
+          "Magilla Gorilla",
+          "Golden Armed Boy"
+        ],
+        "place-of-birth": "Dunfee, Illinois",
+        "first-appearance": "X-MEN Vol. 1 #1, (in furry ape form) AMAZING ADVENTURES #11, (in current feline form) NEW X-MEN Vol. 1 #114",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Mutant",
+        "height": ["5'11", "180 cm"],
+        "weight": ["402 lb", "181 kg"],
+        "eye-color": "Blue",
+        "hair-color": "Blue"
+      },
+      "work": {
+        "occupation": "Biochemist, formerly Xavier Institute for Higher Learning science and math Instructor, mutant activist, college lecturer, researcher, professional wrestler",
+        "base": "Xavier Institute, Salem Center, Westchester County, New York"
+      },
+      "connections": {
+        "group-affiliation": "Secret Avengers, S.W.O.R.D.; formerly X-Men (founding member); X-Club (founding member); Initiative; 198; X-Treme X-Men; Acolytes (while mind-controlled); Queen's Vengeance; X-Factor/X-Terminators (founding member); Rejects; Defenders, Avengers",
+        "relatives": "Sadie McCoy (paternal grandmother), Norton McCoy (father), Edna McCoy (mother), Robert McCoy (paternal great-uncle), John McCoy (uncle)"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/27.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "693",
+      "name": "Vindicator",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "63",
+        "speed": "53",
+        "durability": "64",
+        "power": "58",
+        "combat": "70"
+      },
+      "biography": {
+        "full-name": "Heather Hudson",
+        "alter-egos": "Vindicator II",
+        "aliases": ["Guardian"],
+        "place-of-birth": "Calgary, Alberta, Canada",
+        "first-appearance": "X-Men #139 (November, 1980)",
+        "publisher": "Vindicator II",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": ["5'5", "165 cm"],
+        "weight": ["120 lb", "54 kg"],
+        "eye-color": "Green",
+        "hair-color": "Red"
+      },
+      "work": {
+        "occupation": "former secretary, researcher",
+        "base": "Ottawa, Canada"
+      },
+      "connections": {
+        "group-affiliation": "Alpha Flight",
+        "relatives": "Guardian, husband"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/150.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "202",
+      "name": "Darkhawk",
+      "powerstats": {
+        "intelligence": "50",
+        "strength": "32",
+        "speed": "33",
+        "durability": "70",
+        "power": "74",
+        "combat": "64"
+      },
+      "biography": {
+        "full-name": "Christopher Powell",
+        "alter-egos": "No alter egos found.",
+        "aliases": ["Bucket-Head", "Edge-Man", "Powell"],
+        "place-of-birth": "Queens, New York",
+        "first-appearance": "Darkhawk #1 (March, 1991)",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": ["6'1", "185 cm"],
+        "weight": ["180 lb", "81 kg"],
+        "eye-color": "Brown",
+        "hair-color": "Brown"
+      },
+      "work": {
+        "occupation": "Retired Superhero",
+        "base": "Los Angeles, California; formerly New York City and Avengers Compound"
+      },
+      "connections": {
+        "group-affiliation": "formerly Loners, New Warriors, Avengers West Coast (reservist), Secret Defenders (founder)",
+        "relatives": "Michael Powell (father), Grace Powell (mother), Jonathon and Jason Powell (brothers)"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/53.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "329",
+      "name": "Hollow",
+      "powerstats": {
+        "intelligence": "null",
+        "strength": "null",
+        "speed": "null",
+        "durability": "null",
+        "power": "null",
+        "combat": "null"
+      },
+      "biography": {
+        "full-name": "Monet St. Croix",
+        "alter-egos": "No alter egos found.",
+        "aliases": ["Penace", "M", "Monet St. Croix", "Penny", "Yvette"],
+        "place-of-birth": "-",
+        "first-appearance": "Generation X #1 (1994)",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "null",
+        "height": ["5'7", "170 cm"],
+        "weight": ["- lb", "0 kg"],
+        "eye-color": "Blue",
+        "hair-color": "Red"
+      },
+      "work": {
+        "occupation": "-",
+        "base": "Massachusetts Academy; Phil Urich's aprtment"
+      },
+      "connections": {
+        "group-affiliation": "Generation X, The Loners",
+        "relatives": "M, Emplate, St. Croix Twins"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/931.jpg"
+      }
+    }
+  ]
+}

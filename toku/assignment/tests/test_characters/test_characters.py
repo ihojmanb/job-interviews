@@ -15,30 +15,36 @@ attributes = [
 
 class TestCharacters:
     def test_build_character_success(self, random_id):
-        character = build_character(random_id)
+        character_data = get_character(random_id)
+        character = build_character(character_data)
         assert character
         assert isinstance(character, Character)
 
     def test_build_character_fail(self):
-        character = build_character(0)
+        character_data = get_character(0)
+        character = build_character(character_data)
         assert not isinstance(character, Character)
     
     def test_assign_stats_stamina_success(self, random_id):
-        character = build_character(random_id)
+        character_data = get_character(random_id)
+        character = build_character(character_data)
         for attribute in attributes:
             assert hasattr(character, f"AS_{attribute}")
 
     def test_assign_stats_stamina_fail(self):
-        character = build_character(0)
+        character_data = get_character(0)
+        character = build_character(character_data)
         for attribute in attributes:
             assert not hasattr(character, f"AS_{attribute}")
 
     def test_assign_global_stamina_success(self, random_id):
-        character = build_character(random_id)
+        character_data = get_character(random_id)
+        character = build_character(character_data)
         assert hasattr(character, "actual_stamina")
 
     def test_assign_global_stamina_fail(self):
-        character = build_character(0)
+        character_data = get_character(0)
+        character = build_character(character_data)
         assert not hasattr(character, "actual_stamina")
 
     def test_good_character_numeric_alignment_value(self, good_character):

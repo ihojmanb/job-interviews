@@ -1,13 +1,17 @@
 import math
 import random
 import pytest
+
 from characters.characters import *
 from teams.teams import *
 from tests.test_teams.conftest import bad_team, good_team
+from fixture_team.fixture_team_loader import *
+
 
 class TestTeams:
     def test_build_team_success(self, number_of_team_members):
-        team = TeamCreator.build_random_team(number_of_team_members)
+        fixture_team = load_fixture_team()
+        team = TeamCreator.build_team(fixture_team)
         assert team
         assert isinstance(team, Team)
         assert len(team.members) == number_of_team_members
@@ -17,7 +21,7 @@ class TestTeams:
         assert not isinstance(team, Team)
 
 # Los tests que ocupan los fixtures 'good_team' y 'bad_team'
-# aw se demoran demasiado
+# se demoran demasiado
     def test_team_alignment_good_success(self, good_team):
         team = good_team
         assert isinstance(team, Team)
@@ -37,3 +41,8 @@ class TestTeams:
         team = good_team
         assert isinstance(team, Team)
         assert not team.alignment == 'bad'
+
+    def test_teams_have_different_ids(self, good_team, bad_team):
+        good_team = good_team
+        bad_team = bad_team
+        assert good_team.id != bad_team.id

@@ -24,12 +24,14 @@ def random_id_list(number_of_ids):
 
 @pytest.fixture
 def good_character():
-    batman = build_character(70)
+    batman_data = get_character(70)
+    batman = build_character(batman_data)
     return batman
 
 @pytest.fixture
 def bad_character():
-    joker = build_character(370)
+    joker_data = get_character(370)
+    joker = build_character(joker_data)
     return joker
 
 @pytest.fixture

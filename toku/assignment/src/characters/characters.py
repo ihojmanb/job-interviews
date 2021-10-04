@@ -50,10 +50,10 @@ class Character:
         return random.randint(0, 10)
 
 
-# Returns a Character object if id > 0, else returns None
-def build_character(id):
-    if id > 0:
-        character_data = get_character(id)
+# Returns a Character object if character_data['response'] == 'success',
+#  else returns None
+def build_character(character_data):
+    if character_data["response"] == 'success':
         return Character(character_data)
     else:
         return None
