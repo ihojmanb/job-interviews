@@ -12,20 +12,21 @@ class Team:
         self.set_id()
         self.set_team_members(list_of_characters)
         self.set_team_alignment()
+        
+    def set_id(self):
+        self.__setattr__("id", Team.id_generator())
 
     def set_team_members(self, list_of_characters):
         members = list(
             map(
                 # build_character es poco claro, sería bueno tener
-                # una clase que encapsulara el metodo y tener una instancia
-                # de ella en Team
+                # que fuere un @staticmethod de una clase 
                 lambda character: build_character(character),
                 list_of_characters,
             )
         )
         self.__setattr__("members", members)
         self.notify("membership")
-
 
     def set_team_alignment(self):
         alignment_list = list(map(lambda m: m.alignment, self.members))
@@ -38,8 +39,7 @@ class Team:
     def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
          return ''.join(random.choice(chars) for _ in range(size)) 
 
-    def set_id(self):
-        self.__setattr__("id", Team.id_generator())
+
 
     def notify(self, event):
         if event == "membership":
@@ -59,10 +59,6 @@ class TeamCreator:
     def build_team(list_of_characters):
         team = Team(list_of_characters)
         return team
-
-    # @staticmethod
-    # def set_id_to(team):
-    #     team.set_id(TeamCreator.team_counter)
 
     @staticmethod
     def build_random_team(number_of_team_members=5):

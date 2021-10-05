@@ -1,10 +1,8 @@
 import math
-import pytest
 from attr import attributes
 from fightclub_setup.superhero_api import *
 from characters.characters import *
-from tests.test_characters.conftest import good_character
-
+from teams.teams import *
 attributes = [
     "intelligence",
     "strength",
