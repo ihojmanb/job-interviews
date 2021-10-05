@@ -1,11 +1,10 @@
 """
 conftest.py for test_characters
 """
-from fightclub_setup.superhero_api import *
-from characters.characters import *
-from fixture_characters.fixture_character_loader import *
 import pytest
+from ..conftest import*
 
+# 
 
 @pytest.fixture
 def number_of_characters():
@@ -16,23 +15,23 @@ def number_of_ids():
     return int(10)
     
 @pytest.fixture(autouse=True)
-def random_id():
-    return get_random_id()
+def random_id(superhero_consumer):
+    return superhero_consumer.get_random_id()
 
 @pytest.fixture
-def random_id_list(number_of_ids):
-    return get_list_of_ids(number_of_ids)
+def random_id_list(number_of_ids, superhero_consumer):
+    return superhero_consumer.get_list_of_ids(number_of_ids)
 
 @pytest.fixture
-def good_character():
+def good_character(character_factory):
     batman_data = load_fixture_character("good")
-    batman = build_character(batman_data)
+    batman = character_factory.build_character(batman_data)
     return batman
 
 @pytest.fixture
-def bad_character():
+def bad_character(character_factory):
     joker_data =  load_fixture_character("bad")
-    joker = build_character(joker_data)
+    joker = character_factory.build_character(joker_data)
     return joker
 
 @pytest.fixture
@@ -45,5 +44,5 @@ def good_character_stats(good_character):
         "power" : character.power,
         "combat": character.combat,
         "actual_stamina" : character.actual_stamina,
-        "HP": character.HP
+        "HP": character.health_points
     }

@@ -1,0 +1,414 @@
+{
+  "characters": [
+    {
+      "response": "success",
+      "id": "721",
+      "name": "Wondra",
+      "powerstats": {
+        "intelligence": "null",
+        "strength": "null",
+        "speed": "null",
+        "durability": "null",
+        "power": "null",
+        "combat": "null"
+      },
+      "biography": {
+        "full-name": "",
+        "alter-egos": "No alter egos found.",
+        "aliases": ["-"],
+        "place-of-birth": "-",
+        "first-appearance": "-",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "null",
+        "height": ["-", "0 cm"],
+        "weight": ["- lb", "0 kg"],
+        "eye-color": "-",
+        "hair-color": "-"
+      },
+      "work": { "occupation": "-", "base": "-" },
+      "connections": { "group-affiliation": "-", "relatives": "-" },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/1290.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "372",
+      "name": "Jubilee",
+      "powerstats": {
+        "intelligence": "56",
+        "strength": "8",
+        "speed": "22",
+        "durability": "20",
+        "power": "66",
+        "combat": "90"
+      },
+      "biography": {
+        "full-name": "Jubilation Lee",
+        "alter-egos": "No alter egos found.",
+        "aliases": ["Jubes"],
+        "place-of-birth": "Beverly Hills, California",
+        "first-appearance": "Uncanny X-Men #244 (May, 1989)",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Mutant",
+        "height": ["5'5", "165 cm"],
+        "weight": ["115 lb", "52 kg"],
+        "eye-color": "Red",
+        "hair-color": "Black"
+      },
+      "work": {
+        "occupation": "Student, Adventurer",
+        "base": "Xavier Institute, Salem Center, Westchester County, New York"
+      },
+      "connections": {
+        "group-affiliation": "Currently Generation X, formerly X-Men",
+        "relatives": "Dr. and Mrs. Lee (parents, deceased)"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/87.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "282",
+      "name": "Giant-Man",
+      "powerstats": {
+        "intelligence": "null",
+        "strength": "78",
+        "speed": "null",
+        "durability": "null",
+        "power": "null",
+        "combat": "null"
+      },
+      "biography": {
+        "full-name": "Hank Pym",
+        "alter-egos": "Ant-Man, Goliath, Wasp II, Yellowjacket",
+        "aliases": ["-"],
+        "place-of-birth": "-",
+        "first-appearance": "-",
+        "publisher": "Ant-Man",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": ["-", "0 cm"],
+        "weight": ["- lb", "0 kg"],
+        "eye-color": "-",
+        "hair-color": "-"
+      },
+      "work": { "occupation": "-", "base": "-" },
+      "connections": { "group-affiliation": "-", "relatives": "-" },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/858.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "22",
+      "name": "Ando Masahashi",
+      "powerstats": {
+        "intelligence": "null",
+        "strength": "null",
+        "speed": "null",
+        "durability": "null",
+        "power": "null",
+        "combat": "null"
+      },
+      "biography": {
+        "full-name": "Ando Masahashi",
+        "alter-egos": "No alter egos found.",
+        "aliases": ["Huggerz69", "Sidekick"],
+        "place-of-birth": "-",
+        "first-appearance": "-",
+        "publisher": "NBC - Heroes",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "null",
+        "height": ["-", "0 cm"],
+        "weight": ["- lb", "0 kg"],
+        "eye-color": "-",
+        "hair-color": "-"
+      },
+      "work": {
+        "occupation": "Yamagato Industries computer programmer",
+        "base": "-"
+      },
+      "connections": { "group-affiliation": "-", "relatives": "-" },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/1310.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "269",
+      "name": "Franklin Richards",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "80",
+        "speed": "50",
+        "durability": "60",
+        "power": "100",
+        "combat": "50"
+      },
+      "biography": {
+        "full-name": "Franklin  Richards",
+        "alter-egos": "No alter egos found.",
+        "aliases": [
+          "Franklin Benjamin",
+          "Tattletale",
+          "Psi-Lord",
+          "Ego-Spawn",
+          "Avatar"
+        ],
+        "place-of-birth": "New York, New York",
+        "first-appearance": "Fantastic Four Annual #6",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Mutant",
+        "height": ["4'8", "142 cm"],
+        "weight": ["100 lb", "45 kg"],
+        "eye-color": "Blue",
+        "hair-color": "Blond"
+      },
+      "work": {
+        "occupation": "Student",
+        "base": "Baxter Building, New York, New York (formerly) Four Freedoms Plaza; Pier 4; Massachusetts Academy"
+      },
+      "connections": {
+        "group-affiliation": "Future Foundation; formerly Power Pack, Generation X, Daydreamers",
+        "relatives": "Reed Richards (Mister Fantastic, father), Susan Storm Richards (Invisible Woman, mother), Valeria Richards (sister), Jonathan Storm (Human Torch, uncle), Nathaniel Richards (paternal grandfather), Franklin Storm (maternal grandfather, deceased), Evelyn Richards, Mary Storm (grandmothers (paternal and maternal respectively), deceased), Benjamin J. Grimm (Thing, godfather), Alicia Masters (godmother)."
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/63.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "563",
+      "name": "Robin III",
+      "powerstats": {
+        "intelligence": "81",
+        "strength": "11",
+        "speed": "27",
+        "durability": "28",
+        "power": "29",
+        "combat": "85"
+      },
+      "biography": {
+        "full-name": "Tim Drake",
+        "alter-egos": "Red Robin",
+        "aliases": ["Alvin Draper", "Batman", "Robin", "Timothy Wayne"],
+        "place-of-birth": "-",
+        "first-appearance": "Batman #436 (August, 1989)",
+        "publisher": "Red Robin",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": ["5'5", "165 cm"],
+        "weight": ["125 lb", "56 kg"],
+        "eye-color": "Blue",
+        "hair-color": "Black"
+      },
+      "work": {
+        "occupation": "High School Student",
+        "base": "Gotham City; Titans Tower, San Francisco"
+      },
+      "connections": {
+        "group-affiliation": "Teen Titans, Batman Family, Batman Inc., Wayne Enterprises; formerly Young Justice",
+        "relatives": "Jack Drake (father, deceased), Janet Drake (mother, deceased), Dana Winters Drake (step-mother, status unknown), Bruce Wayne (Batman, adoptive father), Damian Wayne (Robin V, adoptive brother), Dick Grayson (Robin I, adoptive brother), Jason Todd (Robin II, adoptive brother), Cassandra Cain (Batgirl IV, adoptive sister)"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/769.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "549",
+      "name": "Red Robin",
+      "powerstats": {
+        "intelligence": "81",
+        "strength": "11",
+        "speed": "27",
+        "durability": "32",
+        "power": "29",
+        "combat": "80"
+      },
+      "biography": {
+        "full-name": "Tim Drake",
+        "alter-egos": "Robin III",
+        "aliases": [
+          "Alvin Draper",
+          "Batman",
+          "Robin",
+          "Timothy Wayne",
+          "Time Drake"
+        ],
+        "place-of-birth": "Gotham City",
+        "first-appearance": "Batman #436 (August, 1989)",
+        "publisher": "Robin III",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": ["5'5", "165 cm"],
+        "weight": ["125 lb", "56 kg"],
+        "eye-color": "Blue",
+        "hair-color": "Black"
+      },
+      "work": {
+        "occupation": "-",
+        "base": "Gotham City; Titans Tower, San Francisco"
+      },
+      "connections": {
+        "group-affiliation": "Teen Titans, Batman Family, Batman Inc., Wayne Enterprises; formerly Young Justice",
+        "relatives": "Jack Drake (father, deceased), Janet Drake (mother, deceased), Dana Winters Drake (step-mother, status unknown), Bruce Wayne (adoptive father), Damian Wayne (adoptive brother), Dick Grayson (adoptive brother), Jason Todd (adoptive brother), Cassandra Cain (adoptive sister)"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/10009.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "225",
+      "name": "Doctor Octopus",
+      "powerstats": {
+        "intelligence": "94",
+        "strength": "48",
+        "speed": "33",
+        "durability": "40",
+        "power": "53",
+        "combat": "65"
+      },
+      "biography": {
+        "full-name": "Otto Octavius",
+        "alter-egos": "No alter egos found.",
+        "aliases": [
+          "Doctor Octopus",
+          "Doc Ock",
+          "The Master Planner",
+          "The Master Programmer",
+          "Peter Benjamin Parker",
+          "Superior Spider-Man",
+          "Venom",
+          "Superior Venom"
+        ],
+        "place-of-birth": "Schenectady, New York",
+        "first-appearance": "Amazing Spider-Man #3 (July 1963)",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": ["5'9", "175 cm"],
+        "weight": ["245 lb", "110 kg"],
+        "eye-color": "Brown",
+        "hair-color": "Brown"
+      },
+      "work": {
+        "occupation": "Former atomic-research consultant, criminal mastermind",
+        "base": "New York City"
+      },
+      "connections": {
+        "group-affiliation": "Thunderbolts Army; Former leader of the Sinister Six and the Masters of Evil V; Former partner of Green Goblin",
+        "relatives": "-"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/622.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "13",
+      "name": "Ajax",
+      "powerstats": {
+        "intelligence": "56",
+        "strength": "48",
+        "speed": "35",
+        "durability": "80",
+        "power": "34",
+        "combat": "55"
+      },
+      "biography": {
+        "full-name": "Francis",
+        "alter-egos": "No alter egos found.",
+        "aliases": ["\"Frankie\"", "the A-Man", "the Attending"],
+        "place-of-birth": "-",
+        "first-appearance": "Deadpool #14 (March, 1998)",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Cyborg",
+        "height": ["6'4", "193 cm"],
+        "weight": ["200 lb", "90 kg"],
+        "eye-color": "Brown",
+        "hair-color": "Black"
+      },
+      "work": { "occupation": "-", "base": "-" },
+      "connections": {
+        "group-affiliation": "Formerly Weapon X",
+        "relatives": "-"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/10422.jpg"
+      }
+    },
+    {
+      "response": "success",
+      "id": "203",
+      "name": "Darkman",
+      "powerstats": {
+        "intelligence": "75",
+        "strength": "14",
+        "speed": "23",
+        "durability": "85",
+        "power": "12",
+        "combat": "28"
+      },
+      "biography": {
+        "full-name": "Peyton Westlake",
+        "alter-egos": "No alter egos found.",
+        "aliases": ["-"],
+        "place-of-birth": "-",
+        "first-appearance": "Darkman (August 24, 1990)",
+        "publisher": "Universal Studios",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "null",
+        "height": ["-", "0 cm"],
+        "weight": ["- lb", "0 kg"],
+        "eye-color": "-",
+        "hair-color": "-"
+      },
+      "work": { "occupation": "Scientist", "base": "-" },
+      "connections": {
+        "group-affiliation": "-",
+        "relatives": "Julie Hastings (girlfriend)"
+      },
+      "image": {
+        "url": "https://www.superherodb.com/pictures2/portraits/10/100/1126.jpg"
+      }
+    }
+  ]
+}

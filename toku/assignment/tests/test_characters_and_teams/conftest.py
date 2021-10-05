@@ -4,6 +4,7 @@ conftest.py for test_characters_and_teams.py
 from teams.teams import TeamCreator
 import pytest
 from fixture_team.fixture_team_loader import *
+from ..conftest import *
 
 @pytest.fixture
 def number_of_team_members():

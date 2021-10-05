@@ -1,7 +1,7 @@
 from os.path import join, dirname
 import json
 from jsonschema import validate
-from fightclub_setup.superhero_api import *
+from ..conftest import *
 
 def assert_valid_schema(data, schema_file):
     schema = _load_json_schema(schema_file)
@@ -18,9 +18,9 @@ def _load_json_schema(filename):
 superhero api call"""
 
 class TestSchema:
-    def test_validate_character_schema(self):
-        id = get_random_id()
-        character = get_character(id)
+    def test_validate_character_schema(self, superhero_consumer):
+        id = superhero_consumer.get_random_id()
+        character = superhero_consumer.get_character(id)
         assert_valid_schema(character, 'character_schema.json')
 
 

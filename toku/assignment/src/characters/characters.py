@@ -1,6 +1,7 @@
-from fightclub_setup.superhero_api import *
 import random
 import math
+from superhero.superhero_api import *
+from base_component.base_component import *
 
 attributes = ["intelligence", "strength", "speed", "durability", "power", "combat"]
 
@@ -15,8 +16,35 @@ class Character:
         self.set_stats(character_attributes)
         self.set_alignment(character_attributes)
         self.set_actual_stamina()
-        self.set_health_points()
-        self.__setattr__("stats_updated", False)
+        self._health_points = self.__init_health_points()
+        self._stats_updated = False
+        self._team = None
+    
+    @property
+    def health_points(self):
+        return self._health_points
+
+    @health_points.setter
+    def health_points(self, updated_health_points):
+        self._health_points = updated_health_points
+
+    @property
+    def stats_updated(self):
+        return self._stats_updated
+
+    @stats_updated.setter
+    def stats_updated(self, new_value):
+        self._stats_updated = new_value
+
+
+    @property
+    def team(self):
+        return self._team
+
+    @team.setter
+    def team(self, team):
+        self._team = team
+
 
     # Setters
     def set_name(self, name):
@@ -43,7 +71,8 @@ class Character:
     def set_actual_stamina(self):
         self.__setattr__("actual_stamina", self.stamina())
 
-    def set_health_points(self):
+#   health points initializer (private method)
+    def __init_health_points(self):
         health_points = (
             math.floor(
                 (((self.strength * 0.8) + (self.durability * 0.7) + self.power) / 2)
@@ -51,7 +80,9 @@ class Character:
             )
             + 100
         )
-        self.__setattr__("HP", health_points)
+        return health_points
+
+
 
     def set_team_membership(self, team_id):
         self.__setattr__("team_membership", team_id)
@@ -130,16 +161,47 @@ class Character:
         return random_stamina
 
     # Business Logic
-    def attack(self):
-        pass
+    def attack(self, type_of_attack):
+        if type_of_attack == "mental_attack":
+            return self.mental_attack
+        elif type_of_attack == "strong_attack":
+            return self.strong_attack
+        elif type_of_attack == "fast_attack":
+            return self.fast_attack
+
+    def receive_damage(self, damage):
+        old_health_points = self.health_points
+        new_health_points = old_health_points - damage
+        if new_health_points > 0:
+            self.health_points = new_health_points 
+        else:
+            self.health_points = 0
+            self.team.update(self)
 
 
-# Factory
+class CharacterFactory:
+    def __init__(self, api_consumer: SuperHeroApiConsumer):
+        self._api_consumer = api_consumer
 
-# Returns a Character object if character_data['response'] == 'success',
-#  else returns None
-def build_character(character_data):
-    if character_data["response"] == "success":
-        return Character(character_data)
-    else:
-        return None
+    @property
+    def api_consumer(self):
+        return self._api_consumer
+
+    def get_list_of_characters(self, number_of_characters):
+        list_of_characters = self.api_consumer.get_random_list_of_characters(
+            number_of_characters=number_of_characters
+        )
+        return list_of_characters
+    
+
+    def build_character(self, character_data):
+        if character_data["response"] == "success":
+            return Character(character_data)
+        else:
+            return None
+
+    def build_characters(self, list_of_characters):
+        built_characters = list(
+            map(lambda character: self.build_character(character), list_of_characters)
+        )
+        return built_characters
