@@ -4,7 +4,7 @@ En este documento encontrarás:
 * la lógica de las peleas
 * highlights del código que hace cumplir con los requerimientos del problema 
   
-# Instrucciones de ejecución
+# [Instrucciones de ejecución](#Instrucciones-de-ejecución)
 
 ### Clonar branch `toku` del repo
 Para clonar sólo la rama que contiene el desafío:
@@ -47,7 +47,7 @@ Para ejecutar todos los tests:
 ```
 pytest -q -s tests/
 ```
-# Lógica de la pelea
+# [Lógica de la pelea](lógica-de-la-pelea)
 La Pelea se lleva a cabo en `client.py`. Como estrategia de diseño se determinó que sería los equipos, a traves de un mediador, los que pelearían. Así, los personajes le comunican el *damage* de sus ataques a sus respectivos equipos, y estos los notifican al mediador, quien se hará cargo de enviar el mensaje al otro equipo, y este de traspasárselo al personaje que está peleando.
 
 La pelea siempre la parte el el mismo equipo por defecto, y se van alternando los golpes. Los ataques son elegidos al azar.
@@ -55,7 +55,7 @@ La pelea siempre la parte el el mismo equipo por defecto, y se van alternando lo
  Los personajes pelean por como están ordenados en la lista `team.members` de cada equipo. Como los equipos se armaron de manera aleatoria, en estricto rigor los personajes pelean en un orden aleatorio.
 
 
-# Highlights
+# [Highlights](highlights)
 El modelo debe cumplir con los siguientes requisitos:
 1. los equipos se crean de forma aleatoria
 2. no puede haber personajes repetidos
@@ -156,7 +156,7 @@ y satisfacemos `6.` con:
 
 ```
 
-# Qué se puede mejorar
+# [Qué se puede mejorar](qué-se-puede-mejorar)
 El módulo `client.py` está tremendamente *hardcodeado* porque fue lo último que escribí. Falta hacer una reescritura de este módulo y su respectivo testeo.
 
 Aumentar el *test coverage* en todos los módulos. Si bien existe harto test para los módulos más importantes, al momento de escribir `client.py` se extendieron módulos sin el testeo apropiado.
@@ -164,6 +164,3 @@ Aumentar el *test coverage* en todos los módulos. Si bien existe harto test par
 Hacer mejor uso de los patrones de diseño.
 
 Tener un pipeline de ejecución del programa más pulido.
-
-
-# Bonus
