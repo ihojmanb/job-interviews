@@ -85,15 +85,6 @@ class Character:
             stamina = self.get_stamina()
             self.__setattr__(f"AS_{stat}", stamina)
 
-    # def set_alignment(self, attributes):
-    #     alignment = attributes["biography"]["alignment"]
-    #     # mapping aligment to numerical values
-    #     self.__setattr__("alignment", 1 if alignment == "good" else -1)
-
-    # def set_actual_stamina(self):
-    #     self.__setattr__("actual_stamina", self.get_stamina())
-
-    #   health points initializer (private method)
     def __init_health_points(self):
         health_points = (
             math.floor(
@@ -197,7 +188,6 @@ class Character:
         else:
             self.health_points = 0
             self.team.update(self)
-
 
 class CharacterFactory:
     def __init__(self, api_consumer: SuperHeroApiConsumer):
