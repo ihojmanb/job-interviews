@@ -191,7 +191,7 @@ class Character:
 
     def receive_damage(self, damage):
         old_health_points = self.health_points
-        new_health_points = math.floor(old_health_points - damage)
+        new_health_points = old_health_points - damage
         if new_health_points > 0:
             self.health_points = new_health_points
         else:

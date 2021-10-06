@@ -45,6 +45,7 @@ class TestFightMediator:
         team1 = team_creator.build_team(team_name='team1', list_of_characters=list_of_characters[0:5])
         team2 = team_creator.build_team(team_name='team2', list_of_characters=list_of_characters[5:])
         fight_mediator = FightMediator(team1, team2)
+        fight_admin = FightAdmin(fight_mediator)
         fighter1 = team1.actual_fighter
         fighter2 = team2.actual_fighter
         fighter1_old_health_points = fighter1.health_points
@@ -68,6 +69,7 @@ class TestFight:
         team1 = team_creator.build_team(team_name='team1', list_of_characters=list_of_characters[0:5])
         team2 = team_creator.build_team(team_name='team2', list_of_characters=list_of_characters[5:])
         fight_mediator = FightMediator(team1, team2)
+        fight_admin = FightAdmin(fight_mediator)
         fighter1 = team1.actual_fighter
         fighter2 = team2.actual_fighter
         fighter2_health_points = fighter2.health_points

@@ -10,7 +10,7 @@ class Mediator:
     @property
     def admin(self):
         return self._admin
-
+        
     @admin.setter
     def admin(self, admin) -> None:
         self._admin = admin
@@ -47,7 +47,7 @@ class FightMediator(Mediator):
         if sender == self.team1:
             self.admin.winner = self.team2
             self.admin.end_fight()
-            
+
         elif sender == self.team2:
             self.admin.winner = self.team1
             self.admin.end_fight()
