@@ -47,6 +47,10 @@ class FightMediator(Mediator):
         if sender == self.team1:
             self.admin.winner = self.team2
             self.admin.end_fight()
+            
         elif sender == self.team2:
             self.admin.winner = self.team1
             self.admin.end_fight()
+
+    def notify_defeat(self, sender: object) -> None:
+        self.admin.defeated_character = sender

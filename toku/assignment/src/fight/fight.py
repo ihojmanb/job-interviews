@@ -56,14 +56,13 @@ class FightAdmin:
     """
 
     _winner = None
+    _defeated_character = None
 
     def __init__(self, fight_mediator: FightMediator):
         self._state = FightNotStarted(self)
         self._fight_mediator = fight_mediator
         self._fight_mediator.admin = self
-        # self._attacks_first = random.choice(
-        #     [self.fight_mediator.team1, self.fight_mediator.team2]
-        # )
+        self._teams = [self.fight_mediator.team1, self.fight_mediator.team2]
 
     @property
     def state(self):
@@ -84,6 +83,25 @@ class FightAdmin:
     @winner.setter
     def winner(self, winner):
         self._winner = winner
+
+    @property
+    def defeated_character(self):
+        return self._defeated_character
+
+    @defeated_character.setter
+    def defeated_character(self, defeated_character):
+        self._defeated_character = defeated_character
+
+
+
+    @property
+    def teams(self):
+        return self._teams
+
+    @teams.setter
+    def teams(self, teams):
+        self._teams = teams
+
 
     def transition_to(self, state: FightState):
         self.state = state

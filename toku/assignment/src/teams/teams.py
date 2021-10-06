@@ -51,8 +51,9 @@ class Team(BaseComponent):
         self.notify("alignment")
 
     def attack(self, type_of_attack):
-        attack_damage = self.actual_fighter.attack(type_of_attack)
-        self.mediator.notify_attack(self, attack_damage)
+        if self.actual_fighter.health_points > 0:
+            attack_damage = self.actual_fighter.attack(type_of_attack)
+            self.mediator.notify_attack(self, attack_damage)
 
     def receive_damage(self, damage):
         self.actual_fighter.receive_damage(damage)
@@ -71,11 +72,17 @@ class Team(BaseComponent):
     def update(self, character: Character) -> None:
         if character.health_points == 0 and character == self.actual_fighter:
             if len(self.members) > 1:
+                self.mediator.notify_defeat(character)
                 self.members.pop(0)
                 new_actual_fighter = self.members[0]
                 self.actual_fighter = new_actual_fighter
-            else:
+
+            elif len(self.members) == 1:
+                self.mediator.notify_defeat(character)
                 self.members.pop(0)
+                self.mediator.notify_end_fight(self)
+            else:
+                self.mediator.notify_defeat(character)     
                 self.mediator.notify_end_fight(self)
 
 

@@ -11,15 +11,45 @@ class Character:
         self.set_character(character_attributes)
 
     def set_character(self, character_attributes):
-        self.set_name(character_attributes["name"])
-        self.set_id(character_attributes["id"])
+        self._name = character_attributes["name"]
+        self._id = character_attributes["id"]
         self.set_stats(character_attributes)
-        self.set_alignment(character_attributes)
-        self.set_actual_stamina()
+        self._alignment = (
+            1 if character_attributes["biography"]["alignment"] == "good" else -1
+        )
+        self._actual_stamina = self.get_stamina() 
         self._health_points = self.__init_health_points()
         self._stats_updated = False
         self._team = None
-    
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        self._name = name
+
+    @property
+    def id(self):
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        self._id = id
+
+    @property
+    def alignment(self):
+        return self._alignment
+
+    @alignment.setter
+    def alignment(self, alignment):
+        self._alignment = alignment
+
+    @property
+    def actual_stamina(self):
+        return self._actual_stamina
+
     @property
     def health_points(self):
         return self._health_points
@@ -36,7 +66,6 @@ class Character:
     def stats_updated(self, new_value):
         self._stats_updated = new_value
 
-
     @property
     def team(self):
         return self._team
@@ -45,14 +74,7 @@ class Character:
     def team(self, team):
         self._team = team
 
-
-    # Setters
-    def set_name(self, name):
-        self.__setattr__("name", name)
-
-    def set_id(self, id):
-        self.__setattr__("id", id)
-
+    # Custom Setters
     def set_stats(self, attributes):
 
         powerstats = attributes["powerstats"]
@@ -60,18 +82,18 @@ class Character:
             # Setting stats attributes as ints
             self.__setattr__(stat, int(power) if power != "null" else 0)
             # Setting actual stamina per stat
-            stamina = self.stamina()
+            stamina = self.get_stamina()
             self.__setattr__(f"AS_{stat}", stamina)
 
-    def set_alignment(self, attributes):
-        alignment = attributes["biography"]["alignment"]
-        # mapping aligment to numerical values
-        self.__setattr__("alignment", 1 if alignment == "good" else -1)
+    # def set_alignment(self, attributes):
+    #     alignment = attributes["biography"]["alignment"]
+    #     # mapping aligment to numerical values
+    #     self.__setattr__("alignment", 1 if alignment == "good" else -1)
 
-    def set_actual_stamina(self):
-        self.__setattr__("actual_stamina", self.stamina())
+    # def set_actual_stamina(self):
+    #     self.__setattr__("actual_stamina", self.get_stamina())
 
-#   health points initializer (private method)
+    #   health points initializer (private method)
     def __init_health_points(self):
         health_points = (
             math.floor(
@@ -81,8 +103,6 @@ class Character:
             + 100
         )
         return health_points
-
-
 
     def set_team_membership(self, team_id):
         self.__setattr__("team_membership", team_id)
@@ -135,6 +155,10 @@ class Character:
         self.__setattr__("fast_attack", fast_attack_value)
 
     # Getters
+    def get_stamina(self):
+        random_stamina = random.randint(0, 10)
+        return random_stamina
+
     def get_stats(self):
         stats_dict = {}
         for stat in attributes:
@@ -156,10 +180,6 @@ class Character:
         else:
             return math.pow(coefficient, -1)
 
-    def stamina(self):
-        random_stamina = random.randint(0, 10)
-        return random_stamina
-
     # Business Logic
     def attack(self, type_of_attack):
         if type_of_attack == "mental_attack":
@@ -171,9 +191,9 @@ class Character:
 
     def receive_damage(self, damage):
         old_health_points = self.health_points
-        new_health_points = old_health_points - damage
+        new_health_points = math.floor(old_health_points - damage)
         if new_health_points > 0:
-            self.health_points = new_health_points 
+            self.health_points = new_health_points
         else:
             self.health_points = 0
             self.team.update(self)
@@ -192,7 +212,6 @@ class CharacterFactory:
             number_of_characters=number_of_characters
         )
         return list_of_characters
-    
 
     def build_character(self, character_data):
         if character_data["response"] == "success":
