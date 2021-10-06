@@ -161,10 +161,10 @@ def main():
     list_of_random_characters = superhero_api_consumer.get_random_list_of_characters(10)
     team_creator = TeamCreator(character_factory=character_factory)
     team1 = team_creator.build_team(
-        team_name="Equipo 1", list_of_characters=list_of_random_characters[0:2]
+        team_name="Equipo 1", list_of_characters=list_of_random_characters[0:5]
     )
     team2 = team_creator.build_team(
-        team_name="Equipo 2", list_of_characters=list_of_random_characters[2:4]
+        team_name="Equipo 2", list_of_characters=list_of_random_characters[5:]
     )    
     fight_mediator = FightMediator(team1=team1, team2=team2)
     fight_admin = FightAdmin(fight_mediator)
