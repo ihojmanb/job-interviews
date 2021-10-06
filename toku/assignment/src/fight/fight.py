@@ -26,17 +26,14 @@ class FightState:
 
 class FightNotStarted(FightState):
     def handle_start_fight(self):
-        print("Fight started")
         self.fight.transition_to(FightStarted(self.fight))
 
     def handle_end_fight(self):
-        print("Fight canceled")
         self.fight.transition_to(FightEnded(self.fight))
 
 
 class FightStarted(FightState):
     def handle_end_fight(self):
-        print("Fight ended")
         self.fight.transition_to(FightEnded(self.fight))
 
 

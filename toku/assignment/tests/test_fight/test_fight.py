@@ -143,7 +143,6 @@ class TestFight:
         while len(team1.members) > 0 and len(team2.members) > 0:
             team1.attack(random.choice(attack_choice))
             team2.attack(random.choice(attack_choice))
-        print(f'winner:{fight_admin.winner.name}')
         assert isinstance(fight_admin.state, FightEnded)
 
     def test_raise_exception_when_teams_have_the_same_name(self):
