@@ -19,12 +19,10 @@ cd job-interviews/toku/assignment/
 pip3 install -r requirements.txt
 ```
 
-### ejecutar `setup.py`
+### ejecutar `setup.py` en modo `develop`
 ```
 python setup.py develop
-python3 setup.py install
 ```
-
 
 ###  editar `credentials_template.json`
 Debes renombrar este archivo a `credentials.json` 
