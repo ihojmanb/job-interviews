@@ -15,17 +15,26 @@ Una vez clonado entramos al directorio `assignment` que contiene todo el código
 cd job-interviews/toku/assignment/
 ```
 ###  Instalar dependencias
-TODO
+```
+pip3 install -r requirements.txt
+```
+
+### ejecutar `setup.py`
+```
+python setup.py develop
+python3 setup.py install
+```
+
 
 ###  editar `credentials_template.json`
 Debes renombrar este archivo a `credentials.json` 
 ```
 mv credentials_template.json credentials.json
 ```
-y agregar el `access-token` que te entrega la SuperHero API:
+y agregar el `access-token` que te entrega la SuperHero API. Debería verse así:
 ```
 {
-    "access-token": "Your access token goes here "
+    "access-token": "1234567890"
 }
 ```
 ### ejecutar `client.py`

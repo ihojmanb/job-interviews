@@ -4,7 +4,7 @@ conftest.py for test_teams.py
 from teams.teams import TeamCreator
 import pytest
 from fixture_team.fixture_team_loader import *
-from ..conftest import *
+from tests.conftest import *
 
 
 @pytest.fixture
