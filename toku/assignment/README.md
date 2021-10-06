@@ -21,7 +21,7 @@ pip3 install -r requirements.txt
 
 ### ejecutar `setup.py` en modo `develop`
 ```
-python setup.py develop
+python3 setup.py develop
 ```
 
 ###  editar `credentials_template.json`
