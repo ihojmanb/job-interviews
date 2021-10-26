@@ -1,4 +1,4 @@
-from stocks_api.stocks_api import Stock
+from stocks.stocks import Stock
 import pytest 
 
 class TestStockClass:
@@ -22,12 +22,17 @@ class TestStockClass:
         stock = Stock("FB", 0)
         assert not stock.amount == 2
 
-    def test_total_stock_price(self):
+    def test_total_stock_price_success(self):
         facebook_stock = Stock("FB", 2)
         stock_price = facebook_stock.price("2020-10-21")
         total_stock_price = stock_price*facebook_stock.amount
         assert isinstance(stock_price, int)
         assert total_stock_price == stock_price * 2
+
+    def test_total_stock_price_fail(self):
+        stock = Stock("XYZXCV", 2000)
+        with pytest.raises(KeyError):
+            stock_price = stock.price("2019-10-21")
 
 
     def test_delta_of_stock_price_in_different_dates(self):

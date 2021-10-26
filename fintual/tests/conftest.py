@@ -4,7 +4,7 @@ conftest.py for *.py
 
 import pytest
 import json
-from stocks_api.stocks_api import *
+from stocks.stocks import *
 
 @pytest.fixture
 def credentials():
