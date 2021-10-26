@@ -6,6 +6,7 @@ class TestStockClass:
         apple_stock = Stock("AAPL", 1)
         stock_price = apple_stock.price("2020-10-21")
         assert isinstance(stock_price, int)
+        assert stock_price >= 0
 
 
     def test_stock_price_fail_with_no_data_for_specific_date(self):
