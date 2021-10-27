@@ -2,10 +2,7 @@
 En este documento encontrarás:
 * [las instrucciones de ejecución del código](#Instrucciones-de-ejecución)
 * [Supuestos](#supuestos)
-* [highlights del código que hace cumplir con los requerimientos del problema](#highlights)
-
-* [Qué cosas se pueden mejorar en el código](#qué-se-puede-mejorar)
-
+  
 ## Problem to Solve
 
 Construct a simple Portfolio class that has a collection of Stocks and a "Profit" method that receives 2 dates and returns the profit of the Portfolio between those dates.  
